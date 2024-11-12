@@ -1,0 +1,64 @@
+﻿<Window x:Class="WpfApp1.AddUsers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Добавление нового пользователя" Height="900" Width="800">
+    <Grid Margin="10">
+        <StackPanel>
+            <!-- Логотип -->
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Height="53" Width="53">
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="/Мастер пол.png"/>
+                </TextBlock.Background>
+            </TextBlock>
+
+            <!-- Заголовок -->
+            <Label Content="Добавление нового пользователя" HorizontalAlignment="Center" Margin="0,10,0,0" FontWeight="Bold" FontSize="36"/>
+
+            <!-- Основной контейнер для ввода данных -->
+            <StackPanel Margin="0,20,0,0">
+                <Label Content="ФИО:"/>
+                <TextBox x:Name="FIOUS" Height="30" Background="#FFF4E8D3"/>
+
+                <Label Content="Роль:"/>
+                <ComboBox x:Name="RolesComboboxUS" Height="30" Background="#FFF4E8D3"/>
+
+                <Label Content="Партнёр:"/>
+                <ComboBox x:Name="IDPartnerUS" Height="30" Background="#FFF4E8D3"/>
+
+                <Label Content="День рождения:"/>
+                <DatePicker x:Name="DateUS" Height="30"/>
+
+                <Label Content="Паспорт:"/>
+                <TextBox x:Name="PassportUS" Height="30" Background="#FFF4E8D3"/>
+
+                <Label Content="Банковские реквизиты:"/>
+                <TextBox x:Name="BankRecvesitUS" Height="30" Background="#FFF4E8D3"/>
+
+                <Label Content="Номер телефона:"/>
+                <TextBox x:Name="NumberPhoneUS" Height="30" Background="#FFF4E8D3"/>
+
+                <Label Content="Электронная почта:"/>
+                <TextBox x:Name="EmailUS" Height="30" Background="#FFF4E8D3"/>
+
+                <Label Content="Логин:"/>
+                <TextBox x:Name="LoginUS" Height="30" Background="#FFF4E8D3"/>
+
+                <Label Content="Пароль:"/>
+                <TextBox x:Name="PasswordUS" Height="30" Background="#FFF4E8D3"/>
+
+                <!-- Чекбоксы -->
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <CheckBox x:Name="FamilyUS" Content="Наличие семьи" FontWeight="Bold"/>
+                    <CheckBox x:Name="HealthUS" Content="Статус здоровья" FontWeight="Bold" Margin="20,0,0,0"/>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Кнопка добавления пользователя -->
+            <Button Content="Добавить нового пользователя" Click="SaveEditUser" Background="#FF67BA80" FontSize="16" Margin="0,20,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfApp1.ReceiptOfMaterials"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+       Title="Материалы" Height="600" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <!-- Заголовок -->
+            <Label Content="Материалы" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="0,10"/>
+
+            <!-- Иконка -->
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="53" Margin="10,7,0,0">
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="/Мастер пол.png"/>
+                </TextBlock.Background>
+            </TextBlock>
+
+            <!-- DataGrid для материалов -->
+            <DataGrid x:Name="Materialii" Margin="0,10,0,0" AutoGenerateColumns="False" Background="#FFF4E8D3" SelectionChanged="Material_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
+                    <DataGridTextColumn Header="Наименование" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Header="Тип" Binding="{Binding IDTypeMaterial}"/>
+                    <DataGridTextColumn Header="Поставщик" Binding="{Binding IDPostavshik}"/>
+                    <DataGridTextColumn Header="Единицы измерения" Binding="{Binding IDUnit}"/>
+                    <DataGridTextColumn Header="Информация" Binding="{Binding Info}"/>
+                    <DataGridTextColumn Header="Цена" Binding="{Binding Price}"/>
+                    <DataGridTextColumn Header="Количество мест для хранения" Binding="{Binding QunatityStorage}"/>
+                    <DataGridTextColumn Header="Минимальное количество" Binding="{Binding MinQunatity}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!-- Кнопка для поступления материалов -->
+            <Button Background="#FF67BA80" x:Name="OpenAddMaterial" Content="Поступление" HorizontalAlignment="Left" Margin="10,10,0,0" Width="194" Height="58" FontSize="16" Click="OpenAddMaterial_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

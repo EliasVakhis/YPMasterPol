@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfApp1.Manager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Manager" Height="600" Width="800" MaxHeight="500" MaxWidth="800" MinHeight="500" MinWidth="800">
+    <Grid>
+        <StackPanel>
+            <!-- Заголовок -->
+            <TextBlock Text="Управление менеджером" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" Margin="0,10"/>
+
+            <!-- Кнопки управления -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+                <Button x:Name="Tovar" Content="Товары" Click="Product_Click" Background="#FF67BA80" FontWeight="Bold" Margin="5"/>
+                <Button x:Name="Place" Content="Место реализации" Click="Place_Click" Background="#FF67BA80" FontWeight="Bold" Margin="5"/>
+                <Button x:Name="Material" Content="Материалы" Click="Material_Click" Background="#FF67BA80" FontWeight="Bold" Margin="5"/>
+                <Button x:Name="Calc" Content="Расчитать скидку" Click="calculate_discount" Background="#FF67BA80" FontWeight="Bold" Margin="5"/>
+                <Button x:Name="Sale" Content="Продажа" Click="sale_Click" Background="#FF67BA80" FontWeight="Bold" Margin="5"/>
+            </StackPanel>
+
+            <!-- Кнопка регистрации нового партнера -->
+            <Button x:Name="addPartner" Content="Добавить нового партнёра" Click="addPartner_Click" Background="#FF67BA80" FontWeight="Bold" Margin="10"/>
+
+            <!-- DataGrid для отображения партнеров -->
+            <DataGrid x:Name="Partner" AutoGenerateColumns="False" Background="#FFF4E8D3" SelectionChanged="Partner_SelectionChanged" Margin="0,10">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
+                    <DataGridTextColumn Header="Наименование" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Header="ID_Type" Binding="{Binding ID_Type}"/>
+                    <DataGridTextColumn Header="Директор" Binding="{Binding Director}"/>
+                    <DataGridTextColumn Header="Электронная почта" Binding="{Binding Email}"/>
+                    <DataGridTextColumn Header="Номер телефона" Binding="{Binding PhoneNumber}"/>
+                    <DataGridTextColumn Header="Юридический адрес" Binding="{Binding YurAdress}"/>
+                    <DataGridTextColumn Header="ИНН" Binding="{Binding INN}"/>
+                    <DataGridTextColumn Header="Рейтинг" Binding="{Binding Raiting}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!-- Кнопка для заявок -->
+            <Button x:Name="application" Content="Заявки" Click="application_Click" Background="#FF67BA80" FontWeight="Bold" Margin="10"/>
+
+            <!-- Изображение -->
+            <TextBlock HorizontalAlignment="Left">
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="/Мастер пол.png"/>
+                </TextBlock.Background>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

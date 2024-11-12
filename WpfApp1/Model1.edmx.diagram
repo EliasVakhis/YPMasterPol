@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fe84d857bcab414e83a2b49f3269a179" Name="Diagram1">
+        <EntityTypeShape EntityType="YPMasterPolBDModel.CreateProduct" Width="1.5" PointX="10.5" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.HistoryPostav" Width="1.5" PointX="5.25" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.Material" Width="1.5" PointX="8.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.MestaSale" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.PartnerAndPostavchik" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.PartnerProduct" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.Product" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.ProductionProduct" Width="1.5" PointX="13.5" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.Role" Width="1.5" PointX="3" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.Session" Width="1.5" PointX="7.5" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.sysdiagram" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.TypeMaterial" Width="1.5" PointX="6" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.TypeMestaSale" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.TypePartner" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.TypeProduct" Width="1.5" PointX="6" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.Unit" Width="1.5" PointX="6" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.UpdateStorage" Width="1.5" PointX="10.5" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.User" Width="1.5" PointX="5.25" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.Zakaz" Width="1.5" PointX="7.5" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="YPMasterPolBDModel.ZakazProduct" Width="1.5" PointX="12.75" PointY="15.875" IsExpanded="true" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_CreateProduct_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_CreateProduct_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_HistoryPostav_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_HistoryPostav_PartnerAndPostavchik" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_Material_PartnerAndPostavchik" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_Material_TypeMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_Material_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_ProductionProduct_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_UpdateStorage_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_MestaSale_TypeMestaSale" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_PartnerProduct_MestaSale" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_PartnerAndPostavchik_TypePartners" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_PartnerProduct_PartnerAndPostavchik" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_User_PartnerAndPostavchik" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_ZakazProduct_PartnerAndPostavchik" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_Product_TypeProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_ProductionProduct_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_ZakazProduct_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_Session_User" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_Zakaz_User" ManuallyRouted="false" />
+        <AssociationConnector Association="YPMasterPolBDModel.FK_ZakazProduct_Zakaz" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

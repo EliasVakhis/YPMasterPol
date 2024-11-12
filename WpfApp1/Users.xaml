@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfApp1.Users"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Users" Height="450" Width="800" MinHeight="450" MaxHeight="450" MinWidth="800" MaxWidth="800">
+    <Grid>
+        <Button Margin="616,10,10,363" x:Name="Sale" Content="Добавить пользователя" Click="Users_Click"  Background="#FF67BA80"/>
+
+        <DataGrid x:Name="Userii" Margin="0,58,0,0" AutoGenerateColumns="False" Background="#FFF4E8D3" SelectionChanged="Userii_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="ФИО" Binding="{Binding FIO}"/>
+                <DataGridTextColumn Header="IDRole" Binding="{Binding IDRole}"/>
+                <DataGridTextColumn Header="IDPartner" Binding="{Binding IDPartner}"/>
+                <DataGridTextColumn Header="Дата рождения" Binding="{Binding DateBrithday}"/>
+                <DataGridTextColumn Header="Паспорт" Binding="{Binding Passport}"/>
+                <DataGridTextColumn Header="Банковские реквизиты" Binding="{Binding BankRecvesit}"/>
+                <DataGridTextColumn Header="Наличие семьи" Binding="{Binding Family}"/>
+                <DataGridTextColumn Header="Статус здоровья" Binding="{Binding HeathStatus}"/>
+                <DataGridTextColumn Header="Номере телефона" Binding="{Binding NumberPhone}"/>
+                <DataGridTextColumn Header="Электронная почта" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Логин" Binding="{Binding Login}"/>
+                <DataGridTextColumn Header="Пароль" Binding="{Binding Password}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Height="53" Width="53">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="/Мастер пол.png"/>
+            </TextBlock.Background>
+        </TextBlock>
+    </Grid>
+</Window>

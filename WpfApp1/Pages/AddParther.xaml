@@ -1,0 +1,45 @@
+﻿<Window x:Class="WpfApp1.AddParther"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Добавление партнёра" Height="750" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text="Добавление нового партнера" FontWeight="Bold" FontSize="20" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+            <Label Content="ФИО:"/>
+            <TextBox x:Name="Names" Width="667" Height="24" Background="#FFF4E8D3" Margin="0,0,0,10"/>
+
+            <Label Content="Тип:"/>
+            <ComboBox x:Name="Type" Width="667" Height="24" Background="#FFF4E8D3" Margin="0,0,0,10"/>
+
+            <Label Content="Директор:"/>
+            <TextBox x:Name="Director" Width="667" Height="24" Background="#FFF4E8D3" Margin="0,0,0,10"/>
+
+            <Label Content="Электронная почта:"/>
+            <TextBox x:Name="Email" Width="667" Height="24" Background="#FFF4E8D3" Margin="0,0,0,10"/>
+
+            <Label Content="Номер телефона:"/>
+            <TextBox x:Name="PhoneNumber" Width="667" Height="24" Background="#FFF4E8D3" Margin="0,0,0,10"/>
+
+            <Label Content="Юридический адрес:"/>
+            <TextBox x:Name="YurAdress" Width="667" Height="24" Background="#FFF4E8D3" Margin="0,0,0,10"/>
+
+            <Label Content="ИНН:"/>
+            <TextBox x:Name="INN" Width="667" Height="24" Background="#FFF4E8D3" Margin="0,0,0,10"/>
+
+            <Label Content="Рейтинг:"/>
+            <TextBox x:Name="Raiting" Width="667" Height="24" Background="#FFF4E8D3" Margin="0,0,0,10"/>
+
+            <Label Content="ID:"/>
+            <TextBox x:Name="IDPart" Width="667" Height="24" Background="#FFF4E8D3" Margin="0,0,0,20"/>
+
+            <Button Content="Добавить" Width="208" Height="53" Click="Button_Click2"
+                 FontSize="16" Background="#FF67BA80" HorizontalAlignment="Center"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
